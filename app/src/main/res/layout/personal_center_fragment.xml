@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -25,15 +26,68 @@
     <!--android:text="登陆"/>-->
 
     <com.qmuiteam.qmui.widget.QMUITopBarLayout
-    android:id="@+id/top_bar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fitsSystemWindows="true"/>
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/qmui_config_color_red"
+            android:src="@mipmap/personal_center_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                android:id="@+id/profit_img"
+                android:clickable="true"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/profile"
+                app:qmui_border_color="@color/qmui_config_color_red"
+                app:qmui_border_width="1px"
+                app:qmui_is_circle="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qmui_config_color_white"
+                android:text="黯淡神殇"
+                android:textSize="30sp"
+                android:layout_toRightOf="@+id/profit_img"
+                android:layout_alignTop="@+id/profit_img"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/qmui_config_color_white"
+                android:text="「用心表达 勿忘初衷」个人交流群 - 黯淡の勇者部: 490645635"
+                android:textSize="15sp"
+                android:layout_toRightOf="@+id/profit_img"
+                android:layout_alignBottom="@+id/profit_img"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -44,7 +98,7 @@
             <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
                 android:id="@+id/groupListView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
         </ScrollView>
 

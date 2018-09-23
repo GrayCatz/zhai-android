@@ -17,6 +17,7 @@ public class PersonalCenterFragment extends Fragment {
     QMUIGroupListView mGroupListView;
     QMUITopBarLayout mTopBar;
 
+//    QMUIRadiusImageView mRadiusImageView;
 
     @Nullable
     @Override
