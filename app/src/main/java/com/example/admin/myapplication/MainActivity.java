@@ -18,11 +18,15 @@ import com.qmuiteam.qmui.widget.QMUITabSegment;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends FragmentActivity {
 
-
+    @BindView(R.id.tabs)
     QMUITabSegment mTabSegment;
 
+    @BindView(R.id.pager)
     ViewPager mViewPager;
 
     Map<Pager, Fragment> mPages;
@@ -80,9 +84,9 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mTabSegment = findViewById(R.id.tabs);
-        mViewPager = findViewById(R.id.pager);
+        ButterKnife.bind(this);
+//        mTabSegment = findViewById(R.id.tabs);
+//        mViewPager = findViewById(R.id.pager);
 
 
         QMUITabSegment.Tab component = new QMUITabSegment.Tab(
