@@ -23,24 +23,19 @@
     <!--android:layout_width="match_parent"-->
     <!--android:layout_height="wrap_content"-->
     <!--android:text="登陆"/>-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical">
 
-        <com.qmuiteam.qmui.widget.QMUIViewPager
-            android:id="@+id/pager"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/qmui_topbar_height"
+        android:background="@color/qmui_config_color_background"
+        android:fitsSystemWindows="true">
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+            android:id="@+id/groupListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="wrap_content"/>
 
-
-    <com.qmuiteam.qmui.widget.QMUITabSegment
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="?attr/qmui_list_item_bg_with_border_top"
-        android:textSize="12sp" />
+    </ScrollView>
 
 </LinearLayout>
