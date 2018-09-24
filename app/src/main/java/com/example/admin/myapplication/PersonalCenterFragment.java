@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -41,12 +42,20 @@ public class PersonalCenterFragment extends Fragment {
         QMUICommonListItemView settingItem = mGroupListView.createItemView("设置");
         settingItem.setAccessoryType(QMUICommonListItemView.ACCESSORY_TYPE_CHEVRON);
 
+
+
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (v instanceof QMUICommonListItemView) {
                     CharSequence text = ((QMUICommonListItemView) v).getText();
                     Toast.makeText(getActivity(), text + " is Clicked", Toast.LENGTH_SHORT).show();
+                    switch (String.valueOf(text)){
+                        case "账号资料":
+                            Intent intent = new Intent(getContext(),PersonalProfileActivity.class);
+                            startActivity(intent);
+                            break;
+                    }
                 }
             }
         };
