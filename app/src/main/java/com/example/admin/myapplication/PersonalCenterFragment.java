@@ -16,7 +16,7 @@ import com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView;
 
 public class PersonalCenterFragment extends Fragment {
     QMUIGroupListView mGroupListView;
-    QMUITopBarLayout mTopBar;
+//    QMUITopBarLayout mTopBar;
 
 //    QMUIRadiusImageView mRadiusImageView;
 
@@ -25,8 +25,8 @@ public class PersonalCenterFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.personal_center_fragment, container, false);
         mGroupListView = root.findViewById(R.id.groupListView);
-        mTopBar = root.findViewById(R.id.top_bar);
-        initTopBar();
+//        mTopBar = root.findViewById(R.id.top_bar);
+//        initTopBar();
         initGroupListView();
         return root;
     }
@@ -49,7 +49,7 @@ public class PersonalCenterFragment extends Fragment {
             public void onClick(View v) {
                 if (v instanceof QMUICommonListItemView) {
                     CharSequence text = ((QMUICommonListItemView) v).getText();
-                    Toast.makeText(getActivity(), text + " is Clicked", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getActivity(), text + " is Clicked", Toast.LENGTH_SHORT).show();
                     switch (String.valueOf(text)){
                         case "账号资料":
                             Intent intent = new Intent(getContext(),PersonalProfileActivity.class);
@@ -76,17 +76,17 @@ public class PersonalCenterFragment extends Fragment {
     }
 
     
-    private void initTopBar() {
-        mTopBar.addLeftBackImageButton().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                popBackStack();
-            }
-        });
-
-//        mTopBar.setTitle(QDDataManager.getInstance().getName(this.getClass()));
-        mTopBar.setTitle("测试");
-    }
+//    private void initTopBar() {
+//        mTopBar.addLeftBackImageButton().setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                popBackStack();
+//            }
+//        });
+//
+//        mTopBar.setTitle("个人信息");
+//        mTopBar.setBackgroundColor(getResources().getColor(R.color.qmui_config_color_50_blue));
+//    }
 
     private void popBackStack() {
         this.popBackStack();

@@ -20,7 +20,8 @@ public class PersonalProfileActivity extends Activity {
     @BindView(R.id.groupListView2)
     QMUIGroupListView mGroupListView;
     @BindView(R.id.top_bar)
-    QMUITopBarLayout mTopBar;
+//    QMUITopBarLayout mTopBar;
+    QMUITopBar mTopBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -99,12 +100,12 @@ public class PersonalProfileActivity extends Activity {
                 popBackStack();
             }
         });
-//        mTopBar.setTitle(QDDataManager.getInstance().getName(this.getClass()));
-        mTopBar.setTitle("测试");
+        mTopBar.setTitle("账号资料");
+        mTopBar.setBackgroundColor(getResources().getColor(R.color.colorBlue));
     }
 
     private void popBackStack() {
-        popBackStack();
+        finish();
     }
 
 }
