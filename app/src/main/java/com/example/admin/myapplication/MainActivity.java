@@ -139,7 +139,7 @@ public class MainActivity extends FragmentActivity {
     private void initPagers() {
         mPages = new HashMap<>();
         mPages.put(Pager.FORUM, new ForumFragment());
-        mPages.put(Pager.DYNAMIC, new ForumFragment());
+        mPages.put(Pager.DYNAMIC, new DynamicFragment());
         mPages.put(Pager.PERSONAL_CENTER, new PersonalCenterFragment());
 
         mViewPager.setAdapter(adapter);

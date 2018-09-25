@@ -4,38 +4,52 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<ImageView-->
-    <!--android:layout_width="50dp"-->
-    <!--android:layout_height="200dp" />-->
-    <!--<EditText-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@drawable/login_edit"-->
-    <!--android:paddingVertical="10dp"-->
-    <!--android:paddingHorizontal="20dp"/>-->
-    <!--<EditText-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@drawable/login_edit"-->
-    <!--android:paddingVertical="10dp"-->
-    <!--android:paddingHorizontal="20dp"/>-->
-    <!--<Button-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="登陆"/>-->
-
-    <ScrollView
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/qmui_topbar_height"
-        android:background="@color/qmui_config_color_background"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent">
 
-        <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
-            android:id="@+id/groupListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <TableRow>
 
-    </ScrollView>
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/forum_button"
+                android:clickable="true"
+                android:text="xxx社区"
+                android:textColor="@color/qmui_config_color_black" />
+
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/forum_button"
+                android:clickable="true"
+                android:text="xxx社区"
+                android:textColor="@color/qmui_config_color_black" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/forum_button"
+                android:clickable="true"
+                android:text="xxx社区"
+                android:textColor="@color/qmui_config_color_black" />
+
+            <Button
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/forum_button"
+                android:clickable="true"
+                android:text="xxx社区"
+                android:textColor="@color/qmui_config_color_black" />
+
+
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>
